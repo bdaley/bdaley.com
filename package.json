@@ -1,0 +1,12 @@
+{
+  "name": "portfolio-site",
+  "version": "1.0.0",
+  "description": "My website",
+  "main": "index.html",
+  "author": "Brian Daley <brian@bdaley.com>",
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0"
+  }
+}
