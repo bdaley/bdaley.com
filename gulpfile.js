@@ -10,12 +10,12 @@ var gulp = require('gulp'),
  });
 
  gulp.task('html', function () {
-   gulp.src('./www/*.html')
+   gulp.src('./www/**/*.html')
      .pipe(connect.reload());
  });
 
  gulp.task('watch', function () {
-   gulp.watch(['./www/*.html'], ['html']);
+   gulp.watch(['./www/**/*.html'], ['html']);
  });
 
  gulp.task('default', ['connect', 'watch']);
