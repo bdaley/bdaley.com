@@ -1,43 +1,501 @@
+<!--
+
+ ____  _____  _____          _   _   _____          _      ________     __
+|  _ \|  __ \|_   _|   /\   | \ | | |  __ \   /\   | |    |  ____\ \   / /
+| |_) | |__) | | |    /  \  |  \| | | |  | | /  \  | |    | |__   \ \_/ /
+|  _ <|  _  /  | |   / /\ \ | . ` | | |  | |/ /\ \ | |    |  __|   \   /
+| |_) | | \ \ _| |_ / ____ \| |\  | | |__| / ____ \| |____| |____   | |
+|____/|_|  \_\_____/_/    \_\_| \_| |_____/_/    \_\______|______|  |_|
+
+Hi there! We both knew you'd be looking here. Enjoy your stay ;)
+
+-->
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Brian Daley: Web Consultant, Developer</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
 
-	<!-- Basic -->
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Brian Daley: Web Consultant, Developer</title>
-	<meta name="description" content="">
-	<meta name="keywords" content="">
-
-	<!-- Mobile Specific Metas -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <!-- Compiled and minified CSS -->
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-
-	<!-- Favicon -->
-	<link rel="shortcut icon" href="images/favicons/favicon.ico">
-
-
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700|Montserrat:400,700" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
     <style media="screen">
     body {
         width: 100vw;
         height: 100vh;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        overflow-x: hidden;
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
+        background-attachment: fixed;
         background-image: url('../images/apple-camera-desk-office-dark.jpg');
+    }
+
+    h1, h1 a, h1 a:visited  {
+        font-family: "Montserrat";
+        font-weight: 700;
+        color: #fff;
+        font-size: 34px;
+    }
+
+    h1 a:hover{
+        color: #9abeca;
+        text-decoration:none;
+    }
+
+
+
+    * {
+        border-radius: 0 !important;
+    }
+
+    main  {
+        width: calc(100vw - 384px);
+        min-height: 100vh;
+        margin-left: 384px;
+
+        padding: 2em;
+        background-color: rgba(0,0,0,.6);
+    }
+
+    @media (max-width: 995px){
+        main {
+            position:relative;
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+
+    .card {
+        max-width: 225px;
+        margin: 1.5em;
+        float:left;
+        opacity: .8;
+        transition: all .5s;
+    }
+    .card:hover {
+        opacity: 1;
+
+    }
+
+    .thumb-container{
+        max-height: 220px;
+        overflow-y: hidden;
+        border-bottom: 1px solid #eee
+    }
+    .tag {
+        font-weight: 300;
+    }
+
+    .modal-body {
+        font-size: 14px;
+        line-height: 1.5em;
+    }
+
+    .modal-body img {
+        display:block;
+        margin-bottom: 1em;
+    }
+
+    aside {
+        width: 384px;
+        height: 100vh;
+        background-color: #333;
+        position:fixed;
+        padding: 2em;
+        color: #999;
+        border-right:1px solid #444;
+    }
+
+    @media (max-width: 995px){
+        aside {
+            position:relative;
+            width: 100%;
+            height:auto;
+            border-bottom:1px solid #444;
+            border-right: none;
+        }
+    }
+
+    aside p {
+        text-shadow: 1px 1px 1px #000;
     }
     </style>
 
+  </head>
+  <body>
+
+    <aside class="float-left-sm">
+      <h1><a href="/">BRIAN DALEY</a></h1>
+      <h2>Professional Portfolio</h2>
+      <p>The works on this page represent projects that I have recently contributed to in my current role with University Communications. Each color-coded tag denotes my role or contribution to the project.</p>
+    </aside>
+
+    <main class="float-left-sm clear-fix">
+
+            <!-- Admissions Card -->
+            <div class="card">
+              <div class="thumb-container"><img class="card-img-top img-fluid" src="images/small/admissions.png" alt="Card image cap"></div>
+              <div class="card-block">
+                <h6 class="card-title">Undergraduate Admissions</h6>
+                <p class="card-text">
+                    <span class="tag tag-pill tag-warning">Project Management</span>
+                    <span class="tag tag-pill tag-danger">DevOps</span>
+                    <span class="tag tag-pill tag-success">Development</span>
+                </p>
+                <hr>
+                <a href="#" class="btn btn-outline-primary float-xs-right btn-sm" data-toggle="modal" data-target="#admissions">more info</a>
+              </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="admissions" tabindex="-1" role="dialog" aria-labelledby="admissionsLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Undergraduate Admissions</h4>
+                  </div>
+                  <div class="modal-body">
+                    <img src="images/large/admissions.png" class="img-fluid" alt="">
+                    <p>A complete content audit and redesign of the UConn Admissions website. The site was built in Drupal 7 and hosted on Acquia's cloud platform.</p>
+                  </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <a href="http://admissions.uconn.edu/" class="btn btn-primary">Visit Site</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+                <!-- UConn Health Card -->
+                <div class="card">
+                  <div class="thumb-container"><img class="card-img-top img-fluid" src="images/small/health.png" alt="Card image cap"></div>
+                  <div class="card-block">
+                    <h6 class="card-title">UConn Health</h6>
+                    <p class="card-text">
+                        <span class="tag tag-pill tag-warning">Project Management</span>
+                        <span class="tag tag-pill tag-danger">DevOps</span>
+                        <span class="tag tag-pill tag-primary">Analytics</span>
+                        <span class="tag tag-pill tag-default">SEO</span>
+                        <span class="tag tag-pill tag-success">Development</span>
+                        <span class="tag tag-pill tag-info">U/X Design</span>
+                    </p>
+                    <hr>
+                    <a href="#" class="btn btn-outline-primary float-xs-right btn-sm" data-toggle="modal" data-target="#health">more info</a>
+                  </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="health" tabindex="-1" role="dialog" aria-labelledby="healthLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">UConn Health</h4>
+                      </div>
+                      <div class="modal-body">
+                        <img src="images/large/health.png" class="img-fluid" alt="">
+                        <p>Prior editions of the UConn Health web presence were faculty and staff focused. As a result, business suffered. Our team redesigned and re-architected the entire web presence to be patient-focused. This includes the migration of over 200 child sites onto a WordPress multisite instance.</p>
+                      </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <a href="http://health.uconn.edu/" class="btn btn-primary">Visit Site</a>
+                        </div>
+                    </div>
+                  </div>
+                </div>
 
 
-</head>
+                <!-- New Card -->
+                <div class="card">
+                  <div class="thumb-container"><img class="card-img-top img-fluid" src="images/small/today.png" alt="Card image cap"></div>
+                  <div class="card-block">
+                    <h6 class="card-title">UConn Today</h6>
+                    <p class="card-text">
+                        <span class="tag tag-pill tag-warning">Project Management</span>
+                        <span class="tag tag-pill tag-danger">DevOps</span>
+                    </p>
+                    <hr>
+                    <a href="#" class="btn btn-outline-primary float-xs-right btn-sm" data-toggle="modal" data-target="#today">more info</a>
+                  </div>
+                </div>
 
-<body>
+                <!-- Modal -->
+                <div class="modal fade" id="today" tabindex="-1" role="dialog" aria-labelledby="todayLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">UConn Today</h4>
+                      </div>
+                      <div class="modal-body">
+                        <img src="images/large/today.png" class="img-fluid" alt="">
+                        <p>UConn Today has always been in WordPress, but the relatively unique aspect of this project is that we're using WordPress custom post types to manage and generate email blasts through Listserv.</p>
+                      </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <a href="http://today.uconn.edu/" class="btn btn-primary">Visit Site</a>
+                        </div>
+                    </div>
+                  </div>
+                </div>
 
 
-</body>
+                <!-- Alert Card -->
+                <div class="card">
+                  <div class="thumb-container"><img class="card-img-top img-fluid" src="images/small/alert.png" alt="Card image cap"></div>
+                  <div class="card-block">
+                    <h6 class="card-title">UConn Alert Updates</h6>
+                    <p class="card-text">
+                        <span class="tag tag-pill tag-warning">Project Management</span>
+                        <span class="tag tag-pill tag-danger">DevOps</span>
+                        <span class="tag tag-pill tag-success">Development</span>
+                        <span class="tag tag-pill tag-info">U/X Design</span>
+                    </p>
+                    <hr>
+                    <a href="#" class="btn btn-outline-primary float-xs-right btn-sm" data-toggle="modal" data-target="#alert">more info</a>
+                  </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="alert" tabindex="-1" role="dialog" aria-labelledby="alertLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">UConn Alert Updates</h4>
+                      </div>
+                      <div class="modal-body">
+                        <img src="images/large/alert.png" class="img-fluid" alt="">
+                        <p>This is a completely custom interface for updating alert messages on alert.uconn.edu. While the interface seems simple, the magic is in what you don't see. The updates are actually being upload to a CDN via SSH and pulled back down onto each of the load-balanced servers that host the Alert website.</p>
+                      </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <!-- <a href="#" class="btn btn-primary">Visit Site</a> -->
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <!-- Jenkins Card -->
+                <div class="card">
+                  <div class="thumb-container"><img class="card-img-top img-fluid" src="images/small/ci.png" alt="Card image cap"></div>
+                  <div class="card-block">
+                    <h6 class="card-title">Continuous Integration/Delivery</h6>
+                    <p class="card-text">
+                        <span class="tag tag-pill tag-danger">DevOps</span>
+                        <span class="tag tag-pill tag-success">Development</span>
+                    </p>
+                    <hr>
+                    <a href="#" class="btn btn-outline-primary float-xs-right btn-sm" data-toggle="modal" data-target="#ci">more info</a>
+                  </div>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="ci" tabindex="-1" role="dialog" aria-labelledby="ciLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">Continuous Integration/Delivery</h4>
+                      </div>
+                      <div class="modal-body">
+                        <img src="images/large/ci.png" class="img-fluid" alt="">
+                        <p>As our department began to grow, it became evident that managing files and releases manually would no longer be possible. Over the course of a few years we moved all of our projects into Git. From there we built a Jenkins box that handles continuous integration and delivery. On top of that, all developers use reproducible local environments in their workflow.</p>
+                      </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <!-- <a href="#" class="btn btn-primary">Visit Site</a> -->
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <!-- Communications Card -->
+                <div class="card">
+                  <div class="thumb-container"><img class="card-img-top img-fluid" src="images/small/communications.png" alt="Card image cap"></div>
+                  <div class="card-block">
+                    <h6 class="card-title">University Communications</h6>
+                    <p class="card-text">
+                        <span class="tag tag-pill tag-warning">Project Management</span>
+                        <span class="tag tag-pill tag-danger">DevOps</span>
+                        <span class="tag tag-pill tag-success">Development</span>
+                    </p>
+                    <hr>
+                    <a href="#" class="btn btn-outline-primary float-xs-right btn-sm" data-toggle="modal" data-target="#communications">more info</a>
+
+                  </div>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="communications" tabindex="-1" role="dialog" aria-labelledby="communicationsLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">University Communications</h4>
+                      </div>
+                      <div class="modal-body">
+                        <img src="images/large/communications.png" class="img-fluid" alt="">
+                        <p>sdfdgfdsfgsdf</p>
+                      </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <a href="http://communications.uconn.edu" class="btn btn-primary">Visit Site</a>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- We Get It Card -->
+                <div class="card">
+                  <div class="thumb-container"><img class="card-img-top img-fluid" src="images/small/wegetit.png" alt="Card image cap"></div>
+                  <div class="card-block">
+                    <h6 class="card-title">We Get It (Campaign)</h6>
+                    <p class="card-text">
+                        <span class="tag tag-pill tag-danger">DevOps</span>
+                        <span class="tag tag-pill tag-success">Development</span>
+                        <span class="tag tag-pill tag-info">U/X Design</span>
+                    </p>
+                    <hr>
+                    <a href="#" class="btn btn-outline-primary float-xs-right btn-sm" data-toggle="modal" data-target="#wegetit">more info</a>
+
+                  </div>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="wegetit" tabindex="-1" role="dialog" aria-labelledby="wegetitLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">We Get It (Campaign)</h4>
+                      </div>
+                      <div class="modal-body">
+                        <img src="images/large/wegetit.png" class="img-fluid" alt="">
+                        <p>sdfdgfdsfgsdf</p>
+                      </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <a href="http://wegetit.uconn.edu/" class="btn btn-primary">Visit Site</a>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <!-- innovation Card -->
+                <div class="card">
+                  <div class="thumb-container"><img class="card-img-top img-fluid" src="images/small/innovation.png" alt="Card image cap"></div>
+                  <div class="card-block">
+                    <h6 class="card-title">Innovation / Tech Park</h6>
+                    <p class="card-text">
+                        <span class="tag tag-pill tag-danger">DevOps</span>
+                        <span class="tag tag-pill tag-default">SEO</span>
+                        <span class="tag tag-pill tag-success">Development</span>
+                        <span class="tag tag-pill tag-info">U/X Design</span>
+                    </p>
+                    <hr>
+                    <a href="#" class="btn btn-outline-primary float-xs-right btn-sm" data-toggle="modal" data-target="#innovation">more info</a>
+
+                  </div>
+              </div>
+
+              <!-- Modal -->
+              <div class="modal fade" id="innovation" tabindex="-1" role="dialog" aria-labelledby="innovationLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                      <h4 class="modal-title">Innovation / Tech Park</h4>
+                    </div>
+                    <div class="modal-body">
+                      <img src="images/large/innovation.png" class="img-fluid" alt="">
+                      <p>The Innovation website was built to entice businesses to partner with faculty experts at the University. It also served to promote UConn's Technology Park and attract potential lessees.</p>
+                    </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <a href="http://innovation.uconn.edu/" class="btn btn-primary">Visit Site</a>
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <!-- Possible Card -->
+              <div class="card">
+                <img class="card-img-top img-fluid" src="images/small/possible.png" alt="Card image cap">
+                <div class="card-block">
+                  <h6 class="card-title">Power of Possible (Campaign)</h6>
+                  <p class="card-text">
+                      <span class="tag tag-pill tag-danger">DevOps</span>
+                      <span class="tag tag-pill tag-primary">Analytics</span>
+                      <span class="tag tag-pill tag-default">SEO</span>
+                  </p>
+                  <hr>
+                  <a href="#" class="btn btn-outline-primary float-xs-right btn-sm" data-toggle="modal" data-target="#possible">more info</a>
+
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="possible" tabindex="-1" role="dialog" aria-labelledby="possibleLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Power of Possible (Campaign)</h4>
+                  </div>
+                  <div class="modal-body">
+                    <img src="images/large/possible.png" class="img-fluid" alt="">
+                    <p>sdfdgfdsfgsdf</p>
+                  </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <a href="http://possible.uconn.edu" class="btn btn-primary">Visit Site</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+    </main>
+
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script type="text/javascript">
+    $(function(){
+        $('main').masonry({
+            itemSelector: '.card',
+        });
+    });
+    </script>
+  </body>
 </html>
