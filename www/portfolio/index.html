@@ -16,13 +16,14 @@ Hi there! We both knew you'd be looking here. Enjoy your stay ;)
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Brian Daley: Web Consultant, Developer</title>
+    <title>Brian Daley: Web Developer + U/X Designer</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700|Montserrat:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700|Exo+2:200,600" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+    <link rel="shortcut icon" href="../images/favicons/favicon.png" />
     <style media="screen">
     body {
         width: 100vw;
@@ -38,10 +39,14 @@ Hi there! We both knew you'd be looking here. Enjoy your stay ;)
     }
 
     h1, h1 a, h1 a:visited  {
-        font-family: "Montserrat";
-        font-weight: 700;
+        font-family: "Exo 2";
+        font-weight: 600;
         color: #fff;
         font-size: 34px;
+    }
+
+    span.first {
+        font-weight: 200;
     }
 
     h1 a:hover{
@@ -101,6 +106,7 @@ Hi there! We both knew you'd be looking here. Enjoy your stay ;)
     .modal-body img {
         display:block;
         margin-bottom: 1em;
+        border-bottom: 1px solid #eee
     }
 
     aside {
@@ -126,22 +132,34 @@ Hi there! We both knew you'd be looking here. Enjoy your stay ;)
     aside p {
         text-shadow: 1px 1px 1px #000;
     }
+
+    .back, .back:visited{
+        position: absolute;
+        bottom: 0px;
+        color: gray;
+    }
+
+    .back:hover {
+        color: white;
+    }
     </style>
 
   </head>
   <body>
 
     <aside class="float-left-sm">
-      <h1><a href="/">BRIAN DALEY</a></h1>
+      <h1><a href="/"><span class="first">BRIAN</span> <span class="last">DALEY</span></a></h1>
       <h2>Professional Portfolio</h2>
       <p>The works on this page represent projects that I have recently contributed to in my current role with University Communications. Each color-coded tag denotes my role or contribution to the project.</p>
+
+      <a href="/" class="back"><i class="fa fa-arrow-left" aria-hidden="true"></i> return to bdaley.com</a>
     </aside>
 
     <main class="float-left-sm clear-fix">
 
             <!-- Admissions Card -->
             <div class="card">
-              <div class="thumb-container"><img class="card-img-top img-fluid" src="images/small/admissions.png" alt="Card image cap"></div>
+              <div class="thumb-container"><a href="#" data-toggle="modal" data-target="#admissions"><img class="card-img-top img-fluid" src="images/small/admissions.png" alt="Card image cap"></a></div>
               <div class="card-block">
                 <h6 class="card-title">Undergraduate Admissions</h6>
                 <p class="card-text">
@@ -177,7 +195,7 @@ Hi there! We both knew you'd be looking here. Enjoy your stay ;)
 
                 <!-- UConn Health Card -->
                 <div class="card">
-                  <div class="thumb-container"><img class="card-img-top img-fluid" src="images/small/health.png" alt="Card image cap"></div>
+                  <div class="thumb-container"><a href="#" data-toggle="modal" data-target="#health"><img class="card-img-top img-fluid" src="images/small/health.png" alt="Card image cap"></a></div>
                   <div class="card-block">
                     <h6 class="card-title">UConn Health</h6>
                     <p class="card-text">
@@ -217,7 +235,7 @@ Hi there! We both knew you'd be looking here. Enjoy your stay ;)
 
                 <!-- New Card -->
                 <div class="card">
-                  <div class="thumb-container"><img class="card-img-top img-fluid" src="images/small/today.png" alt="Card image cap"></div>
+                  <div class="thumb-container"><a href="#" data-toggle="modal" data-target="#today"><img class="card-img-top img-fluid" src="images/small/today.png" alt="Card image cap"></a></div>
                   <div class="card-block">
                     <h6 class="card-title">UConn Today</h6>
                     <p class="card-text">
@@ -254,7 +272,7 @@ Hi there! We both knew you'd be looking here. Enjoy your stay ;)
 
                 <!-- Alert Card -->
                 <div class="card">
-                  <div class="thumb-container"><img class="card-img-top img-fluid" src="images/small/alert.png" alt="Card image cap"></div>
+                  <div class="thumb-container"><a href="#" data-toggle="modal" data-target="#alert"><img class="card-img-top img-fluid" src="images/small/alert.png" alt="Card image cap"></a></div>
                   <div class="card-block">
                     <h6 class="card-title">UConn Alert Updates</h6>
                     <p class="card-text">
@@ -292,7 +310,7 @@ Hi there! We both knew you'd be looking here. Enjoy your stay ;)
 
                 <!-- Jenkins Card -->
                 <div class="card">
-                  <div class="thumb-container"><img class="card-img-top img-fluid" src="images/small/ci.png" alt="Card image cap"></div>
+                  <div class="thumb-container"><a href="#" data-toggle="modal" data-target="#ci"><img class="card-img-top img-fluid" src="images/small/ci.png" alt="Card image cap"></a></div>
                   <div class="card-block">
                     <h6 class="card-title">Continuous Integration/Delivery</h6>
                     <p class="card-text">
@@ -329,7 +347,7 @@ Hi there! We both knew you'd be looking here. Enjoy your stay ;)
 
                 <!-- Communications Card -->
                 <div class="card">
-                  <div class="thumb-container"><img class="card-img-top img-fluid" src="images/small/communications.png" alt="Card image cap"></div>
+                  <div class="thumb-container"><a href="#" data-toggle="modal" data-target="#communications"><img class="card-img-top img-fluid" src="images/small/communications.png" alt="Card image cap"></a></div>
                   <div class="card-block">
                     <h6 class="card-title">University Communications</h6>
                     <p class="card-text">
@@ -355,7 +373,7 @@ Hi there! We both knew you'd be looking here. Enjoy your stay ;)
                       </div>
                       <div class="modal-body">
                         <img src="images/large/communications.png" class="img-fluid" alt="">
-                        <p>sdfdgfdsfgsdf</p>
+                        <p>Serving as the primary digital agency for the University of Connecticut, it was important to showcase the quality and breadth of our work. This website was built in WordPress with a modified theme and many custom plugins.</p>
                       </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -367,7 +385,7 @@ Hi there! We both knew you'd be looking here. Enjoy your stay ;)
 
                 <!-- We Get It Card -->
                 <div class="card">
-                  <div class="thumb-container"><img class="card-img-top img-fluid" src="images/small/wegetit.png" alt="Card image cap"></div>
+                  <div class="thumb-container"><a href="#" data-toggle="modal" data-target="#wegetit"><img class="card-img-top img-fluid" src="images/small/wegetit.png" alt="Card image cap"></a></div>
                   <div class="card-block">
                     <h6 class="card-title">We Get It (Campaign)</h6>
                     <p class="card-text">
@@ -393,7 +411,7 @@ Hi there! We both knew you'd be looking here. Enjoy your stay ;)
                       </div>
                       <div class="modal-body">
                         <img src="images/large/wegetit.png" class="img-fluid" alt="">
-                        <p>sdfdgfdsfgsdf</p>
+                        <p>In an effort to raise our research profile and promote our brand, the "We Get It" campaign aimed to educate the public and colleagues from peer institutions about the research happening at UConn. This is a custom-coded single-page website that was one of our first projects coded by a team. Without Git and DevOps, we wouldn't have been able to build this site in 2 weeks.</p>
                       </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -406,7 +424,7 @@ Hi there! We both knew you'd be looking here. Enjoy your stay ;)
 
                 <!-- innovation Card -->
                 <div class="card">
-                  <div class="thumb-container"><img class="card-img-top img-fluid" src="images/small/innovation.png" alt="Card image cap"></div>
+                  <div class="thumb-container"><a href="#" data-toggle="modal" data-target="#innovation"><img class="card-img-top img-fluid" src="images/small/innovation.png" alt="Card image cap"></a></div>
                   <div class="card-block">
                     <h6 class="card-title">Innovation / Tech Park</h6>
                     <p class="card-text">
@@ -433,7 +451,7 @@ Hi there! We both knew you'd be looking here. Enjoy your stay ;)
                     </div>
                     <div class="modal-body">
                       <img src="images/large/innovation.png" class="img-fluid" alt="">
-                      <p>The Innovation website was built to entice businesses to partner with faculty experts at the University. It also served to promote UConn's Technology Park and attract potential lessees.</p>
+                      <p>The Innovation website was built to entice businesses to partner with faculty experts at the University. It also served to promote UConn's Technology Park and attract potential lessees. Built in WordPress, this website featured a custom-built, searchable database for "Faculty Experts" that are available to partner with industry on research.</p>
                     </div>
                       <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -447,7 +465,7 @@ Hi there! We both knew you'd be looking here. Enjoy your stay ;)
 
               <!-- Possible Card -->
               <div class="card">
-                <img class="card-img-top img-fluid" src="images/small/possible.png" alt="Card image cap">
+                <div class="thumb-container"><a href="#" data-toggle="modal" data-target="#possible"><img class="card-img-top img-fluid" src="images/small/possible.png" alt="Card image cap"></a></div>
                 <div class="card-block">
                   <h6 class="card-title">Power of Possible (Campaign)</h6>
                   <p class="card-text">
@@ -472,7 +490,7 @@ Hi there! We both knew you'd be looking here. Enjoy your stay ;)
                   </div>
                   <div class="modal-body">
                     <img src="images/large/possible.png" class="img-fluid" alt="">
-                    <p>sdfdgfdsfgsdf</p>
+                    <p>Part of the re-brand of UConn Health involves emphasizing the quality of a research hospital and its role as a leader in new medicine and medical procedures. This website serves as the endpoint for the campaign. It's a completely custom-coded single-page site that registers page views in Google Analytics for each panel viewed.</p>
                   </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -485,7 +503,6 @@ Hi there! We both knew you'd be looking here. Enjoy your stay ;)
     </main>
 
 
-    <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
