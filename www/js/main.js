@@ -1,15 +1,10 @@
-/**
-*	Hendrie (HTML)
-*	Copyright © Hendrie by beshleyua. All Rights Reserved.
-**/
-
 $(function () {
 	'use strict';
-	
+
 	var width = $(window).width();
 	var height = $(window).height();
 	$('.section.started').css({'height': height});
-	
+
 	/* Preloader */
 	$(window).on('load', function() {
 		var preload = $('.preloader');
@@ -52,8 +47,8 @@ $(function () {
 	/* Youtube Video Mobile */
 	if ($(window).width() < 720 & video_bg.length) {
 		$('.mbYTP_wrapper').hide();
-	}	
-	
+	}
+
 	$(window).on('scroll', function(){
 		/* Smoothscroll */
 		var scrollPos = $(window).scrollTop();
@@ -65,7 +60,7 @@ $(function () {
 				currLink.closest('li').addClass("active");
 			}
 		});
-		
+
 		/* Hide mouse button on scroll */
 		if ($(this).scrollTop() >= height-10) {
 			$('.mouse-btn').fadeOut();
@@ -76,7 +71,7 @@ $(function () {
 		if ($(this).scrollTop() <= height-10) {
 			$('.top-menu ul li').removeClass("active");
 		}
-		
+
 		/* Fixed Menu */
 		if($(window).scrollTop() > 10) {
 			$('header').addClass('filled');
@@ -89,11 +84,11 @@ $(function () {
 	$('.top-menu ul li a').on('click', function(){
 		var id = $(this).attr('href');
 		var h = parseFloat($(id).offset().top);
-		
+
 		$('body,html').animate({
 			scrollTop: h + 10
 		}, 800);
-		
+
 		return false;
 	});
 
@@ -110,7 +105,7 @@ $(function () {
 
 		return false;
 	});
-	
+
 	/* On click mouse button, page scroll down */
 	$('.section').on('click', '.mouse-btn', function() {
 		$('body,html').animate({
@@ -127,7 +122,7 @@ $(function () {
 
 	/* Initialize masonry items */
 	var $container = $('.box-items');
-	
+
 	$container.imagesLoaded(function() {
 		$container.multipleFilterMasonry({
 			itemSelector: '.box-item',
@@ -159,7 +154,7 @@ $(function () {
 		closeBtnInside: true,
 		mainClass: 'mfp-fade'
 	});
-	
+
 	/* Validate contact form */
 	$("#cform").validate({
 		rules: {
@@ -188,10 +183,10 @@ $(function () {
 				dataType: 'json',
 				data: 'name='+ $("#cform").find('input[name="name"]').val() + '&tel='+ $("#cform").find('input[name="tel"]').val() + '&email='+ $("#cform").find('input[name="email"]').val() + '&subject='+ $("#cform").find('input[name="subject"]').val() + '&message=' + $("#cform").find('textarea[name="message"]').val(),
 				beforeSend: function() {
-				
+
 				},
 				complete: function() {
-				
+
 				},
 				success: function(data) {
 					$('#cform').fadeOut();
