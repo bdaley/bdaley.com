@@ -3,6 +3,8 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 
+## 0.0.3 - hotfix
+- Added GA
 
 ## 0.0.3 - 2016-12-31
 - Updated private portfolio content
