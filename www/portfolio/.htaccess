@@ -1,4 +1,4 @@
 AuthType Basic
 AuthName "Professional Portfolio of Brian Daley"
-AuthUserFile "/home2/bdaley/.htpasswds/public_html/portfolio/passwd"
 require valid-user
+AuthUserFile "/home/bdaley08/.htpasswds/public_html/portfolio/passwd"
